@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <iframe src="http://192.168.0.2" frameborder="0" style="width: 50vw;height:50vh;"></iframe>
-    <p>hello</p>
-    <script>
 
+<body>
+    <iframe src="http://internal-site" id="frame" frameborder="0" style="width: 1vw;height:1vh;"></iframe>
+
+    <p id="text"></p>
+    <script defer>
+        var frame = document.getElementById("frame").contentWindow.document.body.innerHTML
+        document.getElementById("text").innerHTML = frame
     </script>
 </body>
+
 </html>
